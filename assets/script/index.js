@@ -27,14 +27,14 @@ function getLocation(position){
 
 let map; // Declare the map variable outside the setupMap function
 
-trackBtn.addEventListener('click', function(){
+
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(getLocation, errorHandler, options);
     flyToBtn.style.visibility = 'visible';
   } else {
     console.log(`Geolocation is not supported by your browser`);
   }
-})
+
 
 flyToBtn.addEventListener('click', () => {
   map.flyTo({
